@@ -4,11 +4,11 @@ FROM openjdk:11-jre-slim
 ARG TAG
 
 # Copy the binary built in the 1st stage
-COPY target/helloworld.jar ./
+COPY target/helloworld.jar ./libs
 COPY target/libs ./libs
 
 ENV VERSION=${TAG}
 
-CMD ["java", "-cp", "/libs/:/libs/*:/*", "it.sunnyvale.java.helloworld.Main"]
+CMD ["java", "-cp", "/libs/:/libs/*", "it.sunnyvale.java.helloworld.Main"]
 
 EXPOSE 8080
