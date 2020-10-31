@@ -31,7 +31,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ secrets.DOCKER_USERNAME }}/java-hello-world
         tags: ${{ steps.get_version.outputs.VERSION }}, latest
-        build-args: |
+        build_args: |
           TAG=${{ steps.get_version.outputs.VERSION }}
 
   
