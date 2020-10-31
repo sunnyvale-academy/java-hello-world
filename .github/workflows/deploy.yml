@@ -5,9 +5,8 @@ name: Java CI with Maven
 
 on:
   push:
-    tags: [ development ]
-  pull_request:
-    tags: [ development ]
+    tags:
+    - '*'
 
 jobs:
   build:
