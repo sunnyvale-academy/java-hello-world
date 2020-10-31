@@ -22,3 +22,12 @@ jobs:
         java-version: 11
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v1.1.0
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: ${{ secrets.DOCKER_USERNAME }}/java-hello-world
+        tags: ${{ github.sha }}, latest
+
+  
