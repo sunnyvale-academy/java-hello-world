@@ -3,6 +3,8 @@ FROM openjdk:11-jre-slim
 
 ARG TAG
 
+WORKDIR /
+
 # Copy the binary built in the 1st stage
 COPY target/helloworld.jar ./
 COPY target/libs ./libs
