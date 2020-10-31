@@ -9,6 +9,6 @@ COPY target/libs ./libs
 
 ENV VERSION=${TAG}
 
-CMD ["java", "-jar", "helloworld.jar"]
+CMD ["java", "-cp", "/libs/:/libs/*:/*", "it.sunnyvale.java.helloworld.Main"]
 
 EXPOSE 8080
