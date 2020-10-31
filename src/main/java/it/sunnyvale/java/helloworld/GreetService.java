@@ -69,14 +69,13 @@ public class GreetService implements Service {
     private void getDefaultMessageHandler(ServerRequest request, ServerResponse response) {
         String environment = System.getenv("ENVIRONMENT");
         String version = System.getenv("VERSION");
-        String greeting = System.getenv("GREETING");
         String hostName = "";
         try{
             hostName = java.net.InetAddress.getLocalHost().getHostName();
         }catch(UnknownHostException e){
             e.printStackTrace();
         }
-        String message = String.format("%s World v.%s from host %s! I'm running in %s",greeting,version,hostName,environment);
+        String message = String.format("World v.%s from host %s! I'm running in %s",version,hostName,environment);
         sendResponse(response, message);
     }
 
