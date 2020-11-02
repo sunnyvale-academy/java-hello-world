@@ -27,7 +27,7 @@ $ curl http://localhost/greet | jq .
 
 Please use the "Feature Branch" branching strategy to develop this application:
 
-![feature branch](img/1.svg)
+![feature branch](img/1.png)
 
 Every time a tag is pushed to origin, a CI/CD workflow starts to:
 
