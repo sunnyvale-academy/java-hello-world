@@ -37,4 +37,15 @@ Every time a tag is pushed to origin, a CI/CD workflow starts to:
 - build the image (Docker)
 - push the image (Docker Hub)
 
+So for example this command:
 
+```console
+$ export TAG=3.0 && git tag $TAG && git push origin $TAG 
+```
+tags the application as 3.0 and starts the process.
+
+To delete a tag:
+
+```console
+$ git tag -d $TAG && git push --delete origin $TAG
+```
