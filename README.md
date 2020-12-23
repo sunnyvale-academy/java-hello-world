@@ -4,8 +4,8 @@ This application is used to demonstrate the CI/CD workflow using GitHub Actions 
 
 ## Start the application with Docker
 
-```
-docker run \
+```console
+$ docker run \
     -ti \
     --rm \
     -p 8080:8080 \
